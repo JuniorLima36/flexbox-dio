@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamnetos - align items</title>
+
+    <style>
+        .container{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center{
+            align-items: center;
+        }
+
+        .stretch{
+            align-items: stretch;
+        }
+
+        .start{
+            align-items: flex-start;
+        }
+
+        .end{
+            align-items: flex-end;
+        }
+
+        .baseline{
+            align-items: baseline;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .central{
+            height: 300px;
+            justify-content: center;
+        }
+
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>row</h1>
+    <p>Center</p>
+    <sectiom class="container center">
+        <div class="item">item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+    </sectiom>
+
+    <p>Strectch</p>
+    <sectiom class="container stretch">
+        <div class="item">item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+        <div class="item">Aqui temos o item 4 que faz todos crescerem independente do texto neles</div>
+    </sectiom>
+
+    <p>Flex start</p>
+    <sectiom class="container start">
+        <div class="item">item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+        <div class="item">Aqui temos o item 4 que faz todos crescerem independente do texto neles</div>
+    </sectiom>
+
+    <p>Flex end</p>
+    <sectiom class="container end">
+        <div class="item">item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+        <div class="item">Aqui temos o item 4 que faz todos crescerem independente do texto neles</div>
+    </sectiom>
+
+    <p>Baseline</p>
+    <sectiom class="container baseline">
+        <div class="item"><br>item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+        <div class="item">Aqui temos o item 4 que faz todos crescerem independente do texto neles</div>
+    </sectiom>
+
+    <h1>Column</h1>
+    <p>Flex start</p>
+    <sectiom class="container start column">
+        <div class="item">item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+        <div class="item">Aqui temos o item 4 que faz todos crescerem independente do texto neles</div>
+    </sectiom>
+
+    <p>Flex end</p>
+    <sectiom class="container end column">
+        <div class="item">item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+        <div class="item">Aqui temos o item 4 que faz todos crescerem independente do texto neles</div>
+    </sectiom>
+
+    <p>Center</p>
+    <sectiom class="container center column">
+        <div class="item">item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+    </sectiom>
+
+    <p>Baseline</p>
+    <sectiom class="container baseline column">
+        <div class="item"><br>item 1</div>
+        <div class="item">Aqui temos o item 2</div>
+        <div class="item">Aqui temos o item 3 que é maior que o dois</div>
+        <div class="item">Aqui temos o item 4 que faz todos crescerem independente do texto neles</div>
+    </sectiom>
+
+    <p>Alinhamento central à tela</p>
+    <sectiom class="container central center">
+        <div class="item">Aqui temos o item 4 
+            que faz todos crescerem independente 
+            do texto neles</div>
+    </sectiom>
+</body>
+</html>
